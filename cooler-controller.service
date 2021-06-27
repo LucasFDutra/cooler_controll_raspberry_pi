@@ -1,0 +1,12 @@
+[Unit]
+Description=Controlar a velocidade do cooler com base na temperatura
+After=network.target
+
+[Service]
+User=root
+
+WorkingDirectory=/home/ubuntu/cooler_controller
+ExecStart=/home/ubuntu/cooler_controller/.venv/bin/python main.py
+
+[Install]
+WantedBy=multi-user.target
